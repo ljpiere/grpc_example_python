@@ -1,0 +1,69 @@
+(base) PS C:\Users\ljpca\Downloads\Repositorio\grpc_example_python\scripts> python combined_benchmark.py
+
+== Benchmark gRPC Unario ==
+[gRPC Unario] Iteración 1: Latencia = 0.006836 s, Resultado = 499500
+[gRPC Unario] Iteración 2: Latencia = 0.001256 s, Resultado = 499500
+[gRPC Unario] Iteración 3: Latencia = 0.001050 s, Resultado = 499500
+[gRPC Unario] Iteración 4: Latencia = 0.001224 s, Resultado = 499500
+[gRPC Unario] Iteración 5: Latencia = 0.000945 s, Resultado = 499500
+[gRPC Unario] Iteración 6: Latencia = 0.000841 s, Resultado = 499500
+[gRPC Unario] Iteración 7: Latencia = 0.000841 s, Resultado = 499500
+[gRPC Unario] Iteración 8: Latencia = 0.000978 s, Resultado = 499500
+[gRPC Unario] Iteración 9: Latencia = 0.000974 s, Resultado = 499500
+[gRPC Unario] Iteración 10: Latencia = 0.001175 s, Resultado = 499500
+
+Resumen de gRPC Unario:
+  Número de iteraciones: 10
+  Latencia promedio: 0.001612 s
+  Latencia mediana: 0.001014 s
+  Latencia mínima: 0.000841 s
+  Latencia máxima: 0.006836 s
+  Desviación estándar: 0.001842 s
+
+== Benchmark REST Unario ==
+[REST Unario] Iteración 1: Latencia = 2.059279 s, Resultado = 499500
+[REST Unario] Iteración 2: Latencia = 2.052373 s, Resultado = 499500
+[REST Unario] Iteración 3: Latencia = 2.053649 s, Resultado = 499500
+[REST Unario] Iteración 4: Latencia = 2.044141 s, Resultado = 499500
+[REST Unario] Iteración 5: Latencia = 2.049281 s, Resultado = 499500
+[REST Unario] Iteración 6: Latencia = 2.048867 s, Resultado = 499500
+[REST Unario] Iteración 7: Latencia = 2.051739 s, Resultado = 499500
+[REST Unario] Iteración 8: Latencia = 2.038993 s, Resultado = 499500
+[REST Unario] Iteración 9: Latencia = 2.051744 s, Resultado = 499500
+[REST Unario] Iteración 10: Latencia = 2.038025 s, Resultado = 499500
+
+Resumen de REST Unario:
+  Número de iteraciones: 10
+  Latencia promedio: 2.048809 s
+  Latencia mediana: 2.050510 s
+  Latencia mínima: 2.038025 s
+  Latencia máxima: 2.059279 s
+  Desviación estándar: 0.006647 s
+
+[Validación Unaria] Ambos sistemas retornaron el mismo resultado.
+
+== Benchmark gRPC Streaming ==
+[gRPC Streaming] Iteración 1: Tiempo total = 100.112240 s, Resultado final = 4950
+[gRPC Streaming] Iteración 2: Tiempo total = 100.105361 s, Resultado final = 4950
+[gRPC Streaming] Iteración 3: Tiempo total = 100.139894 s, Resultado final = 4950
+
+Resumen de gRPC Streaming:
+  Número de iteraciones: 3
+  Latencia promedio: 100.119165 s
+  Latencia mediana: 100.112240 s
+  Latencia mínima: 100.105361 s
+  Latencia máxima: 100.139894 s
+  Desviación estándar: 0.018278 s
+
+== Benchmark REST Streaming ==
+[REST Streaming] Iteración 1: Tiempo total = 102.181647 s, Resultado final = Paso 100: suma acumulada = 4950
+[REST Streaming] Iteración 2: Tiempo total = 102.193011 s, Resultado final = Paso 100: suma acumulada = 4950
+[REST Streaming] Iteración 3: Tiempo total = 102.182901 s, Resultado final = Paso 100: suma acumulada = 4950
+
+Resumen de REST Streaming:
+  Número de iteraciones: 3
+  Latencia promedio: 102.185853 s
+  Latencia mediana: 102.182901 s
+  Latencia mínima: 102.181647 s
+  Latencia máxima: 102.193011 s
+  Desviación estándar: 0.006231 s

@@ -2,8 +2,8 @@ import time
 from concurrent import futures
 import grpc
 
-import grpc_example_python.grpc.processor_pb2 as processor_pb2
-import grpc_example_python.grpc.processor_pb2_grpc as processor_pb2_grpc
+import processor_pb2 as processor_pb2
+import processor_pb2_grpc as processor_pb2_grpc
 
 class DataProcessorServicer(processor_pb2_grpc.DataProcessorServicer):
     def ProcessData(self, request, context):
