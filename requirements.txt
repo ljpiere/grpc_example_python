@@ -1,4 +1,5 @@
-grpcio 
+grpcio
 grpcio-tools
-Flask
+fastapi
+uvicorn
 requests

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package processor;
+
+// Servicio que define dos métodos: uno unario y otro streaming.
+service DataProcessor {
+  // Método unario: procesa la lista de números devolviendo la suma.
+  rpc ProcessData (DataRequest) returns (DataResponse) {}
+
+  // Método de server streaming: envía progresivamente la suma acumulada.
+  rpc StreamData (DataRequest) returns (stream DataResponse) {}
+}
+
+// Mensaje que contiene una lista de números enteros.
+message DataRequest {
+  repeated int32 numbers = 1;
+}
+
+// Mensaje de respuesta que incluye el resultado y un mensaje informativo.
+message DataResponse {
+  int32 result = 1;
+  string message = 2;
+}
