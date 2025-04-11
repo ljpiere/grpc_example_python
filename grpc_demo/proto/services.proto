@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package grpcdemo;
+
+// Mensajes para OrderService
+message OrderRequest {
+    int32 order_id = 1;
+    string product = 2;
+    int32 quantity = 3;
+}
+
+message OrderResponse {
+    int32 order_id = 1;
+    string status = 2;
+    string message = 3;
+}
+
+// Mensajes para InventoryService
+message StockRequest {
+    string product = 1;
+    int32 quantity = 2;
+}
+
+message StockResponse {
+    bool available = 1;
+    string info = 2;
+}
+
+// Definición de InventoryService (Microservicio B)
+service InventoryService {
+    rpc CheckStock (StockRequest) returns (StockResponse);
+}
+
+// Definición de OrderService (Microservicio A)
+service OrderService {
+    rpc ProcessOrder (OrderRequest) returns (OrderResponse);
+}
